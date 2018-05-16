@@ -94,5 +94,6 @@
 	"Otherwise, you can change your data directory in blockchain.json (datadir)": "Otherwise, you can change your data directory in blockchain.json (datadir)",
 	"tip: you can resize the terminal or disable the dashboard with": "tip: you can resize the terminal or disable the dashboard with",
 	"help": "help",
-	"quit": "quit"
+	"quit": "quit",
+	"file not found, creating it...": "file not found, creating it..."
 }
