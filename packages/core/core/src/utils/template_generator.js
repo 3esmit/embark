@@ -223,6 +223,7 @@ export class TemplateGenerator {
               links.push(pkgName);
               const cmd = 'yarn unlink && yarn link || yarn link';
               console.log(`cd ${pkgDir}; ${cmd}`.yellow);
+              //TODO: catch error in yarn, warn to reinstall yarn in case of error
               execSync(cmd, {cwd: pkgDir, stdio: 'ignore'});
             }
           });

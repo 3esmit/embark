@@ -193,8 +193,8 @@ class GethClient {
     let cmd = [];
     cmd.push("--port=" + config.port);
     cmd.push("--rpc");
-    cmd.push("--rpcport=" + config.rpcPort);
-    cmd.push("--rpcaddr=" + config.rpcHost);
+    cmd.push("--http.port=" + config.rpcPort);
+    cmd.push("--http.addr=" + config.rpcHost);
     if (config.rpcCorsDomain) {
       if (config.rpcCorsDomain === '*') {
         console.warn('==================================');
@@ -202,7 +202,7 @@ class GethClient {
         console.warn(__('make sure you know what you are doing'));
         console.warn('==================================');
       }
-      cmd.push("--rpccorsdomain=" + config.rpcCorsDomain);
+      cmd.push("--http.corsdomain=" + config.rpcCorsDomain);
     } else {
       console.warn('==================================');
       console.warn(__('warning: cors is not set'));
@@ -215,8 +215,8 @@ class GethClient {
     let cmd = [];
     if (config.wsRPC) {
       cmd.push("--ws");
-      cmd.push("--wsport=" + config.wsPort);
-      cmd.push("--wsaddr=" + config.wsHost);
+      cmd.push("--ws.port=" + config.wsPort);
+      cmd.push("--ws.addr=" + config.wsHost);
       if (config.wsOrigins) {
         if (config.wsOrigins === '*') {
           console.warn('==================================');
@@ -224,7 +224,7 @@ class GethClient {
           console.warn(__('make sure you know what you are doing'));
           console.warn('==================================');
         }
-        cmd.push("--wsorigins=" + config.wsOrigins);
+        cmd.push("--ws.origins=" + config.wsOrigins);
       } else {
         console.warn('==================================');
         console.warn(__('warning: wsOrigins is not set'));
@@ -326,12 +326,12 @@ class GethClient {
         callback("");
       },
       function rpcApi(callback) {
-        args.push('--rpcapi=' + rpc_api.join(','));
-        callback(null, '--rpcapi=' + rpc_api.join(','));
+        args.push('--http.api=' + rpc_api.join(','));
+        callback(null, '--http.api=' + rpc_api.join(','));
       },
       function wsApi(callback) {
-        args.push('--wsapi=' + ws_api.join(','));
-        callback(null, '--wsapi=' + ws_api.join(','));
+        args.push('--ws.api=' + ws_api.join(','));
+        callback(null, '--ws.api=' + ws_api.join(','));
       },
       function accountToUnlock(callback) {
         if (self.isDev && self.config.unlockAddressList) {

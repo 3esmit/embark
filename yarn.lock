@@ -674,14 +674,14 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.0"
 
-"@babel/plugin-syntax-export-default-from@^7.7.4":
+"@babel/plugin-syntax-export-default-from@7.7.4", "@babel/plugin-syntax-export-default-from@^7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-export-default-from/-/plugin-syntax-export-default-from-7.7.4.tgz#897f05808298060b52873fa804ff853540790ea1"
   integrity sha512-j888jpjATLEzOWhKawq46UrpXnCRDbdhBd5io4jgwjJ3+CHHGCRb6PNAVEgs+BXIb+dNRAmnkv36zfB992PRVw==
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-syntax-export-namespace-from@^7.7.4":
+"@babel/plugin-syntax-export-namespace-from@7.7.4", "@babel/plugin-syntax-export-namespace-from@^7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-export-namespace-from/-/plugin-syntax-export-namespace-from-7.7.4.tgz#116c3e5db0d3e41018665528a468bc0f336044c3"
   integrity sha512-YTc2djwMzJjiTTUJxJunRAnK0xW6OrmCSrgBc7QbWtpUo44FCkhZQtNcwZUqVf3sc4JFxhreiJ/P7YkmCTw4rg==
@@ -3053,10 +3053,20 @@
     npmlog "^4.1.2"
     write-file-atomic "^2.3.0"
 
-"@monaco-editor/react@3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@monaco-editor/react/-/react-3.0.1.tgz#98fcfb1a5ccf7cc1f376132ffcec66df2a4588cc"
-  integrity sha512-RRe4OkO7jTgPTtgJMFWUNxI+hFci/6Et6mpN9Tu2i+Ev8A1uPNoQVHix9mQPn9TWUkv+cgGacuKZyVt6wG6SZA==
+"@monaco-editor/loader@^1.1.1":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@monaco-editor/loader/-/loader-1.2.0.tgz#373fad69973384624e3d9b60eefd786461a76acd"
+  integrity sha512-cJVCG/T/KxXgzYnjKqyAgsKDbH9mGLjcXxN6AmwumBwa2rVFkwvGcUj1RJtD0ko4XqLqJxwqsN/Z/KURB5f1OQ==
+  dependencies:
+    state-local "^1.0.6"
+
+"@monaco-editor/react@4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@monaco-editor/react/-/react-4.2.2.tgz#636e5b8eb9519ef62f475f9a4a50f62ee0c493a8"
+  integrity sha512-yDDct+f/mZ946tJEXudvmMC8zXDygkELNujpJGjqJ0gS3WePZmS/IwBBsuJ8JyKQQC3Dy/+Ivg1sSpW+UvCv9g==
+  dependencies:
+    "@monaco-editor/loader" "^1.1.1"
+    prop-types "^15.7.2"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -8679,6 +8689,25 @@ elliptic@^6.0.0, elliptic@^6.4.0, elliptic@^6.4.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
+embark-geth@^6.0.1-nightly.0:
+  version "6.0.1-nightly.0"
+  resolved "https://registry.yarnpkg.com/embark-geth/-/embark-geth-6.0.1-nightly.0.tgz#94d64d335b37877a158c2e2a83886e11612b06af"
+  integrity sha512-jY+h9PNdPoErnYhOi7DKwDl6kI5TvoTDRLe1MI00Y6Gz8m1LTw/sAv8IS2PG3PUBMcs7P/4Xg0iEvnmxmE61uA==
+  dependencies:
+    "@babel/runtime-corejs3" "7.8.4"
+    async "3.2.0"
+    core-js "3.4.3"
+    embark-core "^6.0.0"
+    embark-i18n "^6.0.0"
+    embark-logger "^6.0.0"
+    embark-utils "^6.0.0"
+    fs-extra "8.1.0"
+    netcat "1.3.5"
+    semver "5.6.0"
+    web3 "1.2.6"
+    web3-eth "1.2.6"
+    ws "7.2.2"
+
 embark-test-contract-0@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/embark-test-contract-0/-/embark-test-contract-0-0.0.2.tgz#53913fb40e3df4b816a7bef9f00a5f78fa3d56b4"
@@ -8690,6 +8719,78 @@ embark-test-contract-1@0.0.1, embark-test-contract-1@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/embark-test-contract-1/-/embark-test-contract-1-0.0.1.tgz#802b84150e8038fef6681a3f23b6f4c0dc5b3e80"
   integrity sha512-yFaXMOXOMfYRNFOKEspdXrZzyovceWedtegHtbfs8RZWRzRYY+v6ZDtGm13TRJt3Qt4VZhKky0l7G/SHZMGHCA==
+
+embark@^6.0.1-nightly.0:
+  version "6.0.1-nightly.0"
+  resolved "https://registry.yarnpkg.com/embark/-/embark-6.0.1-nightly.0.tgz#b0e96165232d68fda7da353a9222c78efa671423"
+  integrity sha512-rNA6HHfCuaUI3xtwj0tbUftQGvnIy3tXR1CFivSg18xnwNq+4hOd82hmdttLpXGFpOGoOdxBz4h7WOIDpFVFPw==
+  dependencies:
+    "@babel/runtime-corejs3" "7.8.4"
+    ajv "6.10.2"
+    ascii-table "0.0.9"
+    async "3.2.0"
+    bip39 "3.0.2"
+    chalk "2.4.2"
+    clone-deep "4.0.0"
+    colors "1.3.2"
+    commander "2.18.0"
+    core-js "3.4.3"
+    date-and-time "0.6.2"
+    decompress "4.2.0"
+    embark-core "^6.0.0"
+    embark-deploy-tracker "^6.0.0"
+    embark-engine "^6.0.1-nightly.0"
+    embark-i18n "^6.0.0"
+    embark-logger "^6.0.0"
+    embark-reset "^6.0.0"
+    embark-suggestions "^6.0.0"
+    embark-utils "^6.0.0"
+    eth-ens-namehash "2.0.8"
+    find-up "2.1.0"
+    flatted "0.2.3"
+    fs-extra "8.1.0"
+    ganache-cli "6.8.2"
+    glob "7.1.4"
+    globule "1.2.1"
+    hosted-git-info "2.8.4"
+    http-proxy "1.17.0"
+    istanbul "0.4.5"
+    json-parse-better-errors "1.0.2"
+    lodash.clonedeep "4.5.0"
+    mocha "7.1.0"
+    neo-blessed "0.2.0"
+    node-ipc "9.1.1"
+    npmlog "4.1.2"
+    parse-json "4.0.0"
+    pkg-up "2.0.0"
+    promptly "2.2.0"
+    pump "3.0.0"
+    semver "5.6.0"
+    shelljs "0.8.3"
+    simples "0.8.8"
+    source-map-support "0.5.16"
+    term.js "0.0.7"
+    vm2 "3.6.4"
+    web3 "1.2.6"
+    web3-bzz "1.2.6"
+    web3-core "1.2.6"
+    web3-core-helpers "1.2.6"
+    web3-core-method "1.2.6"
+    web3-core-promievent "1.2.6"
+    web3-core-subscriptions "1.2.6"
+    web3-eth "1.2.6"
+    web3-eth-abi "1.2.6"
+    web3-eth-accounts "1.2.6"
+    web3-eth-contract "1.2.6"
+    web3-eth-iban "1.2.6"
+    web3-eth-personal "1.2.6"
+    web3-net "1.2.6"
+    web3-providers-http "1.2.6"
+    web3-providers-ipc "1.2.6"
+    web3-providers-ws "1.2.6"
+    web3-shh "1.2.6"
+    web3-utils "1.2.6"
+    window-size "1.1.1"
 
 emoji-regex@^7.0.1, emoji-regex@^7.0.2, emoji-regex@^7.0.3:
   version "7.0.3"
@@ -15488,10 +15589,10 @@ moment@^2.18.1:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
-monaco-editor@0.20.0:
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/monaco-editor/-/monaco-editor-0.20.0.tgz#5d5009343a550124426cb4d965a4d27a348b4dea"
-  integrity sha512-hkvf4EtPJRMQlPC3UbMoRs0vTAFAYdzFQ+gpMb8A+9znae1c43q8Mab9iVsgTcg/4PNiLGGn3SlDIa8uvK1FIQ==
+monaco-editor@0.27.0:
+  version "0.27.0"
+  resolved "https://registry.yarnpkg.com/monaco-editor/-/monaco-editor-0.27.0.tgz#4b69108bb1dc1f60174c5dcdf51bc5306ab5ba26"
+  integrity sha512-UhwP78Wb8w0ZSYoKXQNTV/0CHObp6NS3nCt51QfKE6sKyBo5PBsvuDOHoI2ooBakc6uIwByRLHVeT7+yXQe2fQ==
 
 move-concurrently@^1.0.1:
   version "1.0.1"
@@ -21118,6 +21219,11 @@ standard@^10.0.3:
     eslint-plugin-react "~6.10.0"
     eslint-plugin-standard "~3.0.1"
     standard-engine "~7.0.0"
+
+state-local@^1.0.6:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/state-local/-/state-local-1.0.7.tgz#da50211d07f05748d53009bee46307a37db386d5"
+  integrity sha512-HTEHMNieakEnoe33shBYcZ7NX83ACUjCu8c40iOGEZsngj9zRnkqS9j1pqQPXwobB0ZcVTk27REb7COQ0UR59w==
 
 static-extend@^0.1.1:
   version "0.1.2"

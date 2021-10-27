@@ -7,7 +7,7 @@ import arrayMove from 'array-move';
 
 import {DARK_THEME, LIGHT_THEME} from '../constants';
 
-import {monaco as monacoReact} from '@monaco-editor/react';
+import {loader as monacoReact} from '@monaco-editor/react';
 monacoReact
   .config({
     urls: {
